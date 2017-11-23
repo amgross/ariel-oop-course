@@ -20,6 +20,7 @@ public class ReversingServer {
         	String input = request.getRequestURI().getQuery();
         	System.out.println("The input is: "+input);
         	String output = new StringBuilder(input).reverse().toString(); 
+        	output+=output;
         	System.out.println("   The output is: "+output);
         	
         	request.getResponseHeaders().set("Access-Control-Allow-Origin", "*");
